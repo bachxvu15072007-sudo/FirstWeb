@@ -6,7 +6,9 @@ int main () {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    cout << "Hello word";
+    for (int i = 0; i < 10; i++) {
+        cout << i;
+    }
 
     return 0;
 }
