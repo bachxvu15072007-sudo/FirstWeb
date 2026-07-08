@@ -1,1 +1,1 @@
-Xin chao moi nguoi
+xin chào
