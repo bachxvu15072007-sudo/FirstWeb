@@ -6,9 +6,7 @@ int main () {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    for (int i = 0; i < 10; i++) {
-        cout << i;
-    }
+    cout << "Hello world";
 
     return 0;
 }
