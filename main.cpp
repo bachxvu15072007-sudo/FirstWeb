@@ -6,7 +6,7 @@ int main () {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    cout << "Do mi xi";
+    cout << "Ro da ngu";
 
     return 0;
 }
