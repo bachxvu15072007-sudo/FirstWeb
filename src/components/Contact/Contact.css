@@ -1,0 +1,92 @@
+.contact {
+  padding: 80px 0 100px;
+  border-top: 1px solid var(--border);
+}
+
+.contact__heading {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  margin: 8px 0 12px;
+}
+
+.contact__intro {
+  color: var(--text-dim);
+  max-width: 56ch;
+  margin-bottom: 32px;
+}
+
+.contact__form {
+  display: grid;
+  gap: 18px;
+  max-width: 560px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.form-field input,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-bright);
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--syntax-function);
+  box-shadow: 0 0 0 3px rgba(97, 175, 239, 0.15);
+}
+
+.form-field input[aria-invalid='true'],
+.form-field textarea[aria-invalid='true'] {
+  border-color: var(--syntax-error);
+}
+
+.form-error {
+  color: var(--syntax-error);
+  font-size: 0.8rem;
+}
+
+.contact__submit {
+  justify-self: start;
+  margin-top: 4px;
+}
+
+.contact__success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--syntax-string);
+  font-size: 0.9rem;
+  margin: 0;
+  animation: rise 0.3s ease both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .contact__form {
+    padding: 20px;
+  }
+}

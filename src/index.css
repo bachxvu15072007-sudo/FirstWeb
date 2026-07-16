@@ -1,0 +1,190 @@
+/* =========================================================
+   DESIGN TOKENS — "Editor Theme" system
+   The whole site is chrome-styled like a code editor.
+   Dark mode = "One Dark Pro"-ish theme, Light mode = "GitHub Light"-ish theme.
+   Both are genuinely different, purposeful palettes — not a single accent swap.
+   ========================================================= */
+
+:root {
+  /* type scale */
+  --font-display: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --max-width: 1140px;
+  --gutter-width: 56px;
+
+  --transition-theme: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+/* ---------- Dark theme (default) ---------- */
+[data-theme='dark'] {
+  --bg: #282c34;
+  --bg-elevated: #21252b;
+  --bg-inset: #1e2227;
+  --border: #3e4451;
+  --text: #abb2bf;
+  --text-bright: #f3f4f6;
+  --text-dim: #6b7280;
+
+  --syntax-keyword: #c678dd;   /* purple  */
+  --syntax-string: #98c379;    /* green   */
+  --syntax-function: #61afef;  /* blue    */
+  --syntax-warning: #e5c07b;   /* orange  */
+  --syntax-error: #e06c75;     /* red     */
+  --syntax-comment: #7f848e;   /* gray    */
+
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --caret: var(--syntax-string);
+}
+
+/* ---------- Light theme ---------- */
+[data-theme='light'] {
+  --bg: #ffffff;
+  --bg-elevated: #f6f8fa;
+  --bg-inset: #eef1f4;
+  --border: #d1d5da;
+  --text: #24292e;
+  --text-bright: #0b0e14;
+  --text-dim: #6a737d;
+
+  --syntax-keyword: #a626a4;
+  --syntax-string: #50a14f;
+  --syntax-function: #4078f2;
+  --syntax-warning: #c18401;
+  --syntax-error: #e45649;
+  --syntax-comment: #a0a1a7;
+
+  --shadow: 0 12px 28px rgba(36, 41, 46, 0.12);
+  --caret: var(--syntax-function);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: var(--transition-theme);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-bright);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--syntax-function);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--syntax-function);
+  outline-offset: 3px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--syntax-comment);
+  letter-spacing: 0.02em;
+}
+
+.mono {
+  font-family: var(--font-display);
+}
+
+.btn {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--syntax-function);
+  color: #0b0e14;
+  border-color: var(--syntax-function);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(97, 175, 239, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-bright);
+  border-color: var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--syntax-function);
+  color: var(--syntax-function);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 18px;
+  }
+}

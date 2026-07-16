@@ -1,0 +1,112 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-theme), box-shadow 0.3s ease;
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 56px;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: none;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot--red { background: var(--syntax-error); }
+.dot--yellow { background: var(--syntax-warning); }
+.dot--green { background: var(--syntax-string); }
+
+.site-header__logo-text {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-left: 6px;
+  font-size: 0.95rem;
+}
+
+.site-header__tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  flex: 1;
+  scrollbar-width: none;
+}
+.site-header__tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.tab:hover {
+  color: var(--text);
+  background: var(--bg-inset);
+}
+
+.tab--active {
+  color: var(--text-bright);
+  background: var(--bg);
+  border-color: var(--border);
+  border-bottom-color: var(--bg);
+}
+
+.tab__caret {
+  color: var(--syntax-string);
+}
+
+.theme-toggle {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-inset);
+  color: var(--text-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--syntax-function);
+  color: var(--syntax-function);
+  transform: rotate(-12deg);
+}
+
+@media (max-width: 640px) {
+  .site-header__logo-text { display: none; }
+  .tab { padding: 8px 10px; font-size: 0.76rem; }
+}
