@@ -41,6 +41,3 @@ Ghi lại các prompt đã sử dụng khi làm bài tập Portfolio với sự 
 > màn hình di động không."
 
 ---
-
-*Lưu ý: Nội dung dự án mẫu (projectsData.js) và ảnh đại diện đều là dữ liệu giả lập —
-hãy thay bằng thông tin, ảnh và link GitHub thật của bạn trước khi nộp bài / triển khai.*
