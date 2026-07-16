@@ -52,6 +52,19 @@ export default function Hero() {
 
         <div className="hero__content">
           <span className="section-label"></span>
+          <div className="hero__intro-row">
+            <img
+              className="hero__avatar"
+              src="/avatar.jpg"
+              alt={`Ảnh đại diện của ${NAME}`}
+              width="72"
+              height="72"
+            />
+            <p className="hero__school-info">
+              Trường Đại học Công nghệ thông tin - ĐHQG TPHCM<br />
+              Software Engineering - SE
+            </p>
+          </div>
           <h1 className="hero__title">
             Xin chào, mình là <span className="highlight">{NAME}</span>
           </h1>
@@ -66,16 +79,6 @@ export default function Hero() {
             <a className="btn btn-ghost" href="/cv.pdf" download>
               Tải CV <Download size={16} />
             </a>
-          </div>
-
-          <div className="hero__avatar-wrap">
-            <img
-              className="hero__avatar"
-              src="/avatar.jpg"
-              alt={`Ảnh đại diện của ${NAME}`}
-              width="96"
-              height="96"
-            />
           </div>
         </div>
       </div>

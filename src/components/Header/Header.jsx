@@ -54,7 +54,7 @@ export default function Header({ theme, onToggleTheme }) {
           <span className="dot dot--red" />
           <span className="dot dot--yellow" />
           <span className="dot dot--green" />
-          <span className="site-header__logo-text">portfolio.jsx</span>
+          <span className="site-header__logo-text">portfolio</span>
         </button>
 
         <nav className="site-header__tabs" aria-label="Điều hướng chính">
