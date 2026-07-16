@@ -51,7 +51,7 @@ export default function Hero() {
         </div>
 
         <div className="hero__content">
-          <span className="section-label">01_hero</span>
+          <span className="section-label"></span>
           <h1 className="hero__title">
             Xin chào, mình là <span className="highlight">{NAME}</span>
           </h1>

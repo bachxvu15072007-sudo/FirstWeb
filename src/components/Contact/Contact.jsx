@@ -63,7 +63,7 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <span className="section-label">04_contact</span>
+        <span className="section-label"></span>
         <h2 className="contact__heading">Liên hệ với mình</h2>
         <p className="contact__intro">
           Có dự án muốn hợp tác hoặc chỉ đơn giản muốn trò chuyện? Điền form bên dưới,

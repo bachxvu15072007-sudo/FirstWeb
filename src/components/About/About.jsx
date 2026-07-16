@@ -19,7 +19,7 @@ export default function About() {
   return (
     <section id="about" className="about">
       <div className="container">
-        <span className="section-label">02_about-me</span>
+        <span className="section-label"></span>
         <h2 className="about__heading">Về bản thân</h2>
 
         <div className="about__grid">

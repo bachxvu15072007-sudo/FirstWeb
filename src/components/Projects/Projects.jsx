@@ -29,7 +29,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <span className="section-label">03_projects</span>
+        <span className="section-label"></span>
         <h2 className="projects__heading">Dự án đã thực hiện</h2>
 
         <div className="projects__controls">
