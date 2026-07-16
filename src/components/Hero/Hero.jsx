@@ -71,7 +71,7 @@ export default function Hero() {
           <div className="hero__avatar-wrap">
             <img
               className="hero__avatar"
-              src="https://picsum.photos/seed/developer-avatar/240/240"
+              src="/avatar.jpg"
               alt={`Ảnh đại diện của ${NAME}`}
               width="96"
               height="96"
