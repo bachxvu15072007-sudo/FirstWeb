@@ -3,10 +3,10 @@ import { Sun, Moon, CircleDot } from 'lucide-react'
 import './Header.css'
 
 const TABS = [
-  { id: 'home', label: 'Home.jsx' },
-  { id: 'about', label: 'About.jsx' },
-  { id: 'projects', label: 'Projects.jsx' },
-  { id: 'contact', label: 'Contact.jsx' },
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 /**
