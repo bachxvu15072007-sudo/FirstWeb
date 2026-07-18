@@ -5,6 +5,7 @@ import About from './components/About/About.jsx'
 import Projects from './components/Projects/Projects.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
+import Location from './components/Location/Location.jsx'
 
 export default function App() {
   const { theme, toggleTheme } = useDarkMode()
@@ -14,6 +15,7 @@ export default function App() {
       <Header theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <Location />
         <About />
         <Projects />
         <Contact />
